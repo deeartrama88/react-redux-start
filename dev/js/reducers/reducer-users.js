@@ -1,8 +1,3 @@
-/*
- * The users reducer will always return an array of users no matter what
- * You need to return something, so if there are no users then just return an empty array
- * */
-
 export default function () {
     return [
         {
@@ -10,7 +5,7 @@ export default function () {
             first: "Bucky",
             last: "Roberts",
             age: 71,
-            description: "Bucky is a React developer and YouTuber",
+            description: "Bucky is aReact developer and YouTuber",
             thumbnail: "http://i.imgur.com/7yUvePI.jpg"
         },
         {
@@ -26,8 +21,8 @@ export default function () {
             first: "Madison",
             last: "Williams",
             age: 24,
-            description: "Madi likes her dog but it is really annoying.",
+            description: "Madi likes her dog but it is really annoying",
             thumbnail: "http://i.imgur.com/4EMtxHB.png"
-        }
+        },
     ]
 }

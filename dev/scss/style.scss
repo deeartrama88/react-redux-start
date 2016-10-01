@@ -1,5 +1,121 @@
 $primary: #006699;
-
+body {
+  width: 1200px;
+  margin: 0 auto;
+}
 h2 {
 	color: $primary;
+}
+button {
+  border:none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  color: white;
+  background: darkcyan;
+  font-weight: bold;
+  margin-right: 10px;
+  cursor: pointer;
+  text-transform: uppercase;
+  transition: all 0.2s ease;
+
+  &:hover {
+    background: darkgreen;
+  }
+}
+span {
+  display: block;
+  font-weight: bold;
+  font-size: 40px;
+  margin-bottom: 10px;
+  padding-left: 20px;
+}
+.popup {
+  display: block;
+  position: absolute;
+  top: 36%;
+  left: 50%;
+  width: 400px;
+  margin: 0 auto;
+  border-radius: 5px;
+  border: 1px solid lightgoldenrodyellow;
+  padding: 20px;
+  background: rgba(0, 0, 0, 0.9);
+  text-align: center;
+  h2 {
+    color: white;
+    text-transform: uppercase;
+  }
+  .name {
+    font-size: 20px;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: white;
+  }
+}
+.close_popup {
+  text-transform: uppercase;
+  font-weight: bold;
+  color: white;
+  padding: 10px;
+  margin: 20px 0;
+  background: darkseagreen;
+  transition: all 0s ease;
+  box-shadow: 0 3px 0 darken(darkseagreen, 10%);
+  outline: none;
+  &:active {
+    position: relative;
+    top: 3px;
+    box-shadow: none;
+  }
+}
+
+.popup.close {
+  display: none;
+  //animation: fadeout 0.5s linear;
+}
+.popup.open {
+  display: block;
+  //animation: fadeIn 0.5s linear;
+}
+
+@keyframes fadeout {
+  0% {
+    opacity: 1;
+    display: block;
+  }
+  99%{
+    opacity: 0;
+  }
+  100% {
+    visibility: hidden;
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    visibility: visible;
+    opacity: 0;
+    display: block;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.example-enter {
+  opacity: 0.01;
+}
+
+.example-enter.example-enter-active {
+  opacity: 1;
+  transition: opacity 500ms ease-in;
+}
+
+.example-leave {
+  opacity: 1;
+}
+
+.example-leave.example-leave-active {
+  opacity: 0.01;
+  transition: opacity 300ms ease-in;
 }

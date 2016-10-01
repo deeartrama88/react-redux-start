@@ -1,15 +1,21 @@
-import React from 'react';
-import UserList from '../containers/user-list';
-import UserDetails from '../containers/user-detail';
+import React from "react";
 require('../../scss/style.scss');
-
+import UserList from '../containers/user-list';
+import UserDetail from '../containers/user-detail';
+import Counter from '../containers/counter';
+import Popup from '../containers/popup';
+import News from '../containers/news_list';
 const App = () => (
     <div>
-        <h2>User List</h2>
+        <h2>Username list:</h2>
         <UserList />
-        <hr />
-        <h2>User Details</h2>
-        <UserDetails />
+        <hr/>
+        <h2>User Detail:</h2>
+        <UserDetail />
+        <hr/>
+        <Counter />
+        <Popup />
+        <News />
     </div>
 );
 
